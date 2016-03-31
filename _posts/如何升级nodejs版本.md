@@ -1,6 +1,6 @@
 ---
 title: 如何升级nodejs版本
-date: 2016-03-30 16:10:29
+date: 2016-03-31 16:10:29
 tags: node
 categories: node
 ---
