@@ -1,7 +1,9 @@
+---
 title: markdown-demo
 comments: false
 date: 2016-01-17 22:48:52
-fancybox:
+tags:
+- markdown
 ---
 主要是介绍markdown的常用语法
 <!-- more -->
