@@ -4,14 +4,13 @@ date: 2016-04-11 11:17:51
 categories:
 - 数据库
 tags:
-- 数据库
 - mysql
 description: "mysql字段替换"
 ---
 replace的用法（替换某字段部分内容）
 <!-- more -->
 #### replace into
-```
+```sql
 replace into table (id,name) values('1','aa'),('2','bb')
 ```
 此语句的作用是向表table中插入两条记录。如果主键id为1或2不存在就相当于

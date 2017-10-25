@@ -4,14 +4,12 @@ date: 2016-03-31 16:25:14
 categories:
 - 数据库
 tags:
-- 数据库
 - mysql
-description: "mysql储存过程多游标的写法示例"
 ---
 
 下面是一个简单存储过程的例子:
 
-```
+```sql
 drop procedure IF EXISTS test_proc;
 DELIMITER $$
 create procedure test_proc()
@@ -51,7 +49,7 @@ call test_proc();
 
 上述存储过程的例子中只使用了一个游标，那么如果要使用两个或者更多游标怎么办，其实很简单，可以这么说，一个怎么用两个就是怎么用的。例子如下：
 
-```
+```sql
 drop procedure IF EXISTS test_proc_1;
 delimiter $$
 create procedure test_proc_1()
@@ -97,7 +95,7 @@ call test_proc_1();
 
 上述代码和第一个例子中基本一样，就是多了一个游标声明和遍历游标。这里需要注意的是，在遍历第二个游标前使用了set done = 0，因为当第一个游标遍历玩后其值被handler设置为1了，如果不用set把它设置为 0 ，那么第二个游标就不会遍历了。当然好习惯是在每个打开游标的操作前都用该语句，确保游标能真正遍历。当然还可以使用begin语句块嵌套的方式来处理多个游标,例如：
 
-```
+```sql
 drop procedure IF EXISTS test_proc_2;
 delimiter $$
 create procedure test_proc_2()

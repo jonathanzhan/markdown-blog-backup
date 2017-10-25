@@ -1,11 +1,10 @@
 ---
 title: fmt标签(formatDate)详解
-date: 2016-03-31 16:26:44
+date: 2014-09-25 16:26:44
 categories:
 - java
 tags:
 - jstl
-- java
 description: "jstl标签中的fmt标签中的formatDate方法的使用说明"
 ---
 
@@ -18,11 +17,8 @@ description: "jstl标签中的fmt标签中的formatDate方法的使用说明"
 ##### 参数说明
 
 1. value：需要格式化的数据，类型为java.util.Date
-
 2. type:需要格式化的样式，参见下面
-
 3. dateStyle: 具体样式，比type更具体的描述,可以不写，具体参看下面例子
-
 4. pattern：输出的格式
 
 ##### 格式模式
