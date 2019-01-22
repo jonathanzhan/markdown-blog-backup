@@ -1,17 +1,33 @@
 ---
-title: 关于我
-date: 2016-10-10 17:27:42
-fancybox: false
+title: 关于
+description: 个人简介
+layout: about
+comments: false
+sidebar: custom
 ---
+致力于微服务架构整合。喜欢新事物，对新的技术有追求； 喜欢产品，喜欢设计，喜欢 coding。
+```
+{
+  name: 'Jonathan'
+  age: 29,
+  gender: '男',
+  profession: 'Java Web Developer & Programmer',
+  experience: '10年',
+  address: '陕西省西安市',
+  education: '本科',
+  Github: 'https://github.com/whatlookingfor',
+  Gitee: https://gitee.com/whatlookingfor,
+  Blog: http://whatlookingfor.com,
+  email: 'whatlookingfor@gmail.com',
+  description: '致力于微服务架构整合',
 
----
-
-　　**2010年8月毕业至今，小程序员一枚，会搭框架，会写代码。**
-以下是博主稍微能拿的出手的项目
-<div class="github-widget" data-repo="whatlookingfor/workfocus"></div>
-<div class="github-widget" data-repo="whatlookingfor/workfocus-spring-boot"></div>
-<div class="github-widget" data-repo="whatlookingfor/workfocus-dubbo"></div>
-<div style="text-align: center">
-以下是博主喜欢的一些歌曲，可以听听，稍作休息~
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=0&id=474471332&auto=1&height=430"></iframe>
-</div>
+  skills: [
+    ['Html', 'Javascript', 'jQuery', 'CSS', 'ES6', 'Node'],
+    ['Java', 'Spring','Mybatis','SpringBoot','SpringCloud','Dubbo'],
+    ['Git', 'SVN'],
+    ['Vue'],
+    ['Bootstrap'],
+    ['Mysql','Oracle','Redis','Neo4j']
+  ]
+}
+```
