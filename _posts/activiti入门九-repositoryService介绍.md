@@ -5,6 +5,7 @@ tags:
  - activiti
 categories:
  - activiti
+toc: true
 ---
 在*activiti入门一(简单介绍中)*,简单介绍了repositoryService的主要作用是管理流程仓库，例如部署，删除，读取流程资源等。本文就repositoryService再做下详细的说明
 <!-- more -->

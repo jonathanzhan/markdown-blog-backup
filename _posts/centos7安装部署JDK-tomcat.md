@@ -5,8 +5,10 @@ tags:
 - linux
 categories:
 - 运维实施
+toc: true
 ---
-
+本文主要介绍java web常用开发生产环境的简单部署操作,后续持续更新
+<!-- more -->
 ## Centos7安装JDK，tomcat以及部署简单程序的操作说明
 ### Centos7安装JDK
 

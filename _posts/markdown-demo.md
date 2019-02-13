@@ -2,6 +2,8 @@
 title: markdown-demo
 comments: false
 date: 2016-01-17 22:48:52
+categories:
+- 建站
 tags:
 - markdown
 ---
@@ -70,13 +72,15 @@ tags:
 
     这是一个代码块，此行左侧有四个不可见的空格。
 
-```
-@requires_authorization
-def somefunc(param1='', param2=0):
-    '''A docstring'''
-    if param1 > param2: # interesting
-        print 'Greater'
-    return (param2 - param1 + 1) or None
+```java
+public class BooleanUtilsTest {
+    @Test
+    public void test() {
+        assertThat(BooleanUtils.toBoolean("True")).isTrue();
+        assertThat(BooleanUtils.toBoolean("tre")).isFalse();
+        assertThat(BooleanUtils.toBoolean(null)).isFalse();
+    }
+}
 ```
 
 <code class="match">if param1 > param2</code>

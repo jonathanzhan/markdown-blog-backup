@@ -5,6 +5,7 @@ tags:
 - activiti
 categories:
 - activiti
+toc: true
 ---
 在上文中,主要讲解了activiti的引擎配置,本文主要分析activiti的引擎与引擎配置对象的使用,以及中文乱码的解决方案。
 <!-- more -->

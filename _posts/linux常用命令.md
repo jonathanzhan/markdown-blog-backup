@@ -5,8 +5,10 @@ tags:
 - linux
 categories:
 - 运维实施
+toc: true
 ---
-
+本文记录了在开发部署过程中的一些常用命令，持续更新中
+<!-- more -->
 #### 创建文件
 ` touch fileName `
 

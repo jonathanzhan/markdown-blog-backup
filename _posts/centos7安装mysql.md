@@ -6,8 +6,10 @@ tags:
 - mysql
 categories:
 - 运维实施
+toc: true
 ---
-
+本文主要介绍如何在contos7下安装mysql，以及安装成功后需要做的一些后续操作
+<!-- more -->
 
 ## centos7安装mysql（yum）
 ### 安装环境

@@ -5,8 +5,10 @@ tags:
 - linux
 categories:
 - 运维实施
+toc: true
 ---
-
+ubuntu下防火墙端口号的设置方法
+<!-- more -->
 iptables是linux下的防火墙，同时也是服务名称。
 ### 关闭所有的INPUT FORWARD OUTPUT 只对某些端口开放。
 ```bash

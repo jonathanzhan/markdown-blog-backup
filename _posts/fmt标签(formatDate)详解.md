@@ -8,6 +8,8 @@ tags:
 description: "jstl标签中的fmt标签中的formatDate方法的使用说明"
 ---
 
+jstl标签中的fmt标签中的formatDate方法的使用说明
+<!-- more -->
 ##### 标签引用
 
 ```

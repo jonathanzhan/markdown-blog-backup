@@ -1,11 +1,12 @@
 ---
 title: thymeleaf方言和处理器简介
 date: 2017-11-02 15:43:23
-thumbnail: files/thumb/1.jpg
+thumbnail: /files/thumb/1.jpg
 tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 thymeleaf是一个很容易扩展的库，大部分面向用户的功能不是直接构建在他的核心中，而是通过打包和组件化到一个称谓Dialect(方言)的功能集合中。
 由于Spring-boot间接式的主推了thymeleaf模板，所以本文主要介绍下thymeleaf的一些扩展功能，尽管thymeleaf3的性能相比2来说提升了很大，但是相比别的，还是有一点差距。

@@ -6,8 +6,10 @@ tags:
 - oracle
 categories:
 - 运维实施
+toc: true
 ---
-
+本文介绍在centos7下安装oracle11g的操作步骤
+<!-- more -->
 
 ## Centos7安装oracle11gR2说明
 
@@ -22,7 +24,7 @@ categories:
 ### 安装Oracle前准备
 
 #### 创建运行oracle数据库的系统用户和用户组
-```
+```Bash
 [jonathan@localhost ~]$ su root　　#切换到root
 Password:
 [root@localhost]# groupadd oinstall　　#创建用户组oinstall
@@ -41,7 +43,7 @@ uid=1001(oracle) gid=1002(dba) groups=1002(dba)
 为啥要创建oinstall用户组及dba组？参考[http://www.oracle.com/technetwork/cn/articles/hunter-rac11gr2-iscsi-2-092412-zhs.html#13](http://www.oracle.com/technetwork/cn/articles/hunter-rac11gr2-iscsi-2-092412-zhs.html#13)
 
 #### 创建oracle数据库安装目录
-```
+```Bash
 [jonathan@localhost ~]$ su root
 Password:
 [root@localhost]# mkdir -p /data/oracle　　#oracle数据库安装目录
@@ -61,7 +63,7 @@ oracle默认不支持CentOS系统安装，Oracle Database 11g Release 2 的 OS�
 
 修改文件 /etc/RedHat-release
 
-```
+```shell
 [root@localhost data]# cat /proc/version
 Linux version 3.10.0-327.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Thu Nov 19 22:10:57 UTC 2015
 [root@localhost data]# cat /etc/redhat-release　　
@@ -75,7 +77,7 @@ redhat-7
 #### 安装oracle数据库所需要的软件包
 Oracle Database Package Requirements for Linux x86-64 如下：（参考：[https://docs.oracle.com/cd/E11882_01/install.112/e47689/pre_install.htm#BABCFJFG](https://docs.oracle.com/cd/E11882_01/install.112/e47689/pre_install.htm#BABCFJFG)）
 
-```
+```shell
 yum install gcc* gcc-* gcc-c++-* glibc-devel-* glibc-headers-* compat-libstdc* libstdc* elfutils-libelf-devel* libaio-devel* sysstat* unixODBC-* pdksh-*
 ```
 

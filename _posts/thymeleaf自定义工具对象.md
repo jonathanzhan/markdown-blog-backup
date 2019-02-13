@@ -5,6 +5,7 @@ tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 Thymeleaf还提供了一系列Utility对象，通过#来访问，比如strings，dates等等，但在一些特殊的情况下，内置的对象并不能满足我们的使用。所以本文主要介绍下如何自定义工具对象表达式。
 <!-- more -->

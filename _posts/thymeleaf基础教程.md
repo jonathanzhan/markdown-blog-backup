@@ -5,6 +5,7 @@ tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 ## thymeleaf 介绍
 简单说， Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点：
@@ -12,7 +13,7 @@ categories:
 - Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签里增加额外的属性来达到模板+数据的展示方式。浏览器解释 html 时会忽略未定义的标签属性，所以 thymeleaf 的模板可以静态地运行；当有数据返回到页面时，Thymeleaf 标签会动态地替换掉静态内容，使页面动态显示。
 - Thymeleaf 开箱即用的特性。它提供标准和spring标准两种方言，可以直接套用模板实现JSTL、 OGNL表达式效果，避免每天套模板、该jstl、改标签的困扰。同时开发人员也可以扩展和创建自定义的方言。
 - Thymeleaf 提供spring标准方言和一个与 SpringMVC 完美集成的可选模块，可以快速的实现表单绑定、属性编辑器、国际化等功能。
-
+<!-- more -->
 ## 标准表达式语法
 
 它们分为四类：
@@ -121,37 +122,36 @@ URL还可以设置参数：
 
 #### 字面（Literals）
 
-- 文本文字（Text literals）: ``` 'one text', 'Another one!',… ```
-- 数字文本（Number literals）: ``` 0, 34, 3.0, 12.3,… ```
-- 布尔文本（Boolean literals）: ```true, false```
-- 空（Null literal）: ```null```
-- 文字标记（Literal tokens）: ```one, sometext, main,…```
+- 文本文字（Text literals）: `'one text', 'Another one!',… `
+- 数字文本（Number literals）: ` 0, 34, 3.0, 12.3,… `
+- 布尔文本（Boolean literals）: `true, false`
+- 空（Null literal）: `null`
+- 文字标记（Literal tokens）: `one, sometext, main,…`
 
 #### 文本操作（Text operations）
-- 字符串连接(String concatenation): ```+```
-- 文本替换（Literal substitutions）: ```|The name is ${name}|```
+- 字符串连接(String concatenation): `+`
+- 文本替换（Literal substitutions）: `|The name is ${name}|`
 
 #### 算术运算（Arithmetic operations）
-- 二元运算符（Binary operators）: ```+, -, *, /, %```
-- 减号（单目运算符）Minus sign (unary operator): ```-```
+- 二元运算符（Binary operators）: `+, -, *, /, %`
+- 减号（单目运算符）Minus sign (unary operator): `-`
 
 #### 布尔操作（Boolean operations）
-- 二元运算符（Binary operators）:``` and, or```
-- 布尔否定（一元运算符）Boolean negation (unary operator):``` !, not```
+- 二元运算符（Binary operators）:` and, or`
+- 布尔否定（一元运算符）Boolean negation (unary operator):` !, not`
 
 #### 比较和等价(Comparisons and equality)
-- 比较（Comparators）: ```>, <, >=, <= (gt, lt, ge, le)```
-- 等值运算符（Equality operators）:``` ==, != (eq, ne)```
+- 比较（Comparators）: `>, <, >=, <= (gt, lt, ge, le)`
+- 等值运算符（Equality operators）:` ==, != (eq, ne)`
 
 #### 条件运算符（Conditional operators）
-- If-then: ```(if) ? (then)```
-- If-then-else: ```(if) ? (then) : (else)```
-- Default: (value) ?: ```(defaultvalue)```
+- If-then: `(if) ? (then)`
+- If-then-else: `(if) ? (then) : (else)`
+- Default: (value) ?: `(defaultvalue)`
 
 所有这些特征可以被组合并嵌套：
-
-``` html
-'User is of type ' + (${user.isAdmin()} ? 'Administrator' : (${user.type} ?: 'Unknown'))
+```html
+    'User is of type ' + (${user.isAdmin()} ? 'Administrator' : (${user.type} ?: 'Unknown'))
 ```
 
 
@@ -160,32 +160,32 @@ URL还可以设置参数：
 
 关键字	| 功能介绍	| 案例
 ---     |---        |---
- th:id | 替换id |  ```     <input th:id="'xxx' + ${collect.id}"/>  ```   
- th:text|文本替换|``` <p  th:text="${collect.description}">description</p>```
- th:utext|支持html的文本替换|  ``` <p  th:utext="${htmlcontent}">conten</p>```
- th:object |替换对象|``` <div th:object="${session.user}">  ```
- th:value |属性赋值|``` <input th:value="${user.name}" />  ```
- th:with |变量赋值运算|``` <div th:with="isEven=${prodStat.count}%2==0"></div>  ```
- th:style |设置样式|``` th:style="'display:' + @{(${sitrue} ? 'none' : 'inline-block')} + ''"  ```
- th:onclick |点击事件|``` th:onclick="'getCollect()'"  ```
- th:each |属性赋值|``` tr th:each="user,userStat:${users}">  ```
- th:if |判断条件|```  <a th:if="${userId == collect.userId}" >  ```
- th:unless |和th:if判断相反|```<a th:href="@{/login}" th:unless=${session.user != null}>Login</a>  ```
- th:href |链接地址|``` <a th:href="@{/login}" th:unless=${session.user != null}>Login</a> />  ```
- th:switch |多路选择 配合th:case 使用|``` <div th:switch="${user.role}">  ```
- th:case  |th:switch的一个分支|```  <p th:case="'admin'">User is an administrator</p> ```
- th:fragment |布局标签，定义一个代码片段，方便其它地方引用|``` <div th:fragment="alert"> ```
- th:include |布局标签，替换内容到引入的文件 |``` <head th:include="layout :: htmlhead" th:with="title='xx'"></head> />  ```
- th:replace |布局标签，替换整个标签到引入的文件|``` <div th:replace="fragments/header :: title"></div>  ```
- th:selected |selected选择框 选中|``` th:selected="(${xxx.id} == ${configObj.dd})" ```
- th:src|图片类地址引入|``` <img class="img-responsive" alt="App Logo" th:src="@{/img/logo.png}"  />  ```
- th:inline |定义js脚本可以使用变量|``` <script type="text/javascript" th:inline="javascript"> ```
- th:action |表单提交的地址|``` <form action="subscribe.html" th:action="@{/subscribe}">```
- th:remove |删除某个属性|```<tr th:remove="all">   1.all:删除包含标签和所有的孩子。2.body:不包含标记删除,但删除其所有的孩子。3.tag:包含标记的删除,但不删除它的孩子。4.all-but-first:删除所有包含标签的孩子,除了第一个。5.none:什么也不做。这个值是有用的动态评估。```
- th:attr|设置标签属性，多个属性可以用逗号分隔|比如 ```th:attr="src=@{/image/aa.jpg},title=#{logo}"```，此标签不太优雅，一般用的比较少。
+ th:id | 替换id |  `     <input th:id="'xxx' + ${collect.id}"/> `   
+ th:text|文本替换|` <p  th:text="${collect.description}">description</p>`
+ th:utext|支持html的文本替换|  ` <p  th:utext="${htmlcontent}">conten</p>`
+ th:object |替换对象|` <div th:object="${session.user}">  `
+ th:value |属性赋值|` <input th:value="${user.name}" />  `
+ th:with |变量赋值运算|` <div th:with="isEven=${prodStat.count}%2==0"></div>  `
+ th:style |设置样式|` th:style="'display:' + @{(${sitrue} ? 'none' : 'inline-block')} + ''"  `
+ th:onclick |点击事件|` th:onclick="'getCollect()'"  `
+ th:each |属性赋值|` tr th:each="user,userStat:${users}">  `
+ th:if |判断条件|`  <a th:if="${userId == collect.userId}" >  `
+ th:unless |和th:if判断相反|`<a th:href="@{/login}" th:unless=${session.user != null}>Login</a>  `
+ th:href |链接地址|` <a th:href="@{/login}" th:unless=${session.user != null}>Login</a> />  `
+ th:switch |多路选择 配合th:case 使用|` <div th:switch="${user.role}">  `
+ th:case  |th:switch的一个分支|`  <p th:case="'admin'">User is an administrator</p> `
+ th:fragment |布局标签，定义一个代码片段，方便其它地方引用|` <div th:fragment="alert"> `
+ th:include |布局标签，替换内容到引入的文件 |` <head th:include="layout :: htmlhead" th:with="title='xx'"></head> />  `
+ th:replace |布局标签，替换整个标签到引入的文件|` <div th:replace="fragments/header :: title"></div>  `
+ th:selected |selected选择框 选中|` th:selected="(${xxx.id} == ${configObj.dd})" `
+ th:src|图片类地址引入|` <img class="img-responsive" alt="App Logo" th:src="@{/img/logo.png}"  />  `
+ th:inline |定义js脚本可以使用变量|` <script type="text/javascript" th:inline="javascript"> `
+ th:action |表单提交的地址|` <form action="subscribe.html" th:action="@{/subscribe}">`
+ th:remove |删除某个属性|`<tr th:remove="all">   1.all:删除包含标签和所有的孩子。2.body:不包含标记删除,但删除其所有的孩子。3.tag:包含标记的删除,但不删除它的孩子。4.all-but-first:删除所有包含标签的孩子,除了第一个。5.none:什么也不做。这个值是有用的动态评估。`
+ th:attr|设置标签属性，多个属性可以用逗号分隔|比如 `th:attr="src=@{/image/aa.jpg},title=#{logo}"`，此标签不太优雅，一般用的比较少。
 
 还有非常多的标签，这里只列出最常用的几个,由于一个标签内可以包含多个th:x属性，其生效的优先级顺序为:
-```include,each,if/unless/switch/case,with,attr/attrprepend/attrappend,value/href,src ,etc,text/utext,fragment,remove。  ```
+`include,each,if/unless/switch/case,with,attr/attrprepend/attrappend,value/href,src ,etc,text/utext,fragment,remove。 `
 
 
 
@@ -206,7 +206,7 @@ URL还可以设置参数：
 
 ###  2、条件判断 if/unless
 
-Thymeleaf中使用th:if和th:unless属性进行条件判断，下面的例子中，```<a> ```标签只有在```th:if```中条件成立时才显示：
+Thymeleaf中使用th:if和th:unless属性进行条件判断，下面的例子中，`<a> `标签只有在`th:if`中条件成立时才显示：
 
 ``` html
 <a th:if="${myself=='yes'}" > </i> </a>
@@ -214,7 +214,7 @@ Thymeleaf中使用th:if和th:unless属性进行条件判断，下面的例子中
 ```
 th:unless于th:if恰好相反，只有表达式中的条件不成立，才会显示其内容。
 
-也可以使用  ```(if) ? (then) : (else)``` 这种语法来判断显示的内容
+也可以使用  `(if) ? (then) : (else)` 这种语法来判断显示的内容
 
 ###  3、for 循环
 
@@ -246,7 +246,7 @@ iterStat称作状态变量，属性有：
 URL在Web应用模板中占据着十分重要的地位，需要特别注意的是Thymeleaf对于URL的处理是通过语法@{...}来处理的。
 如果需要Thymeleaf对URL进行渲染，那么务必使用th:href，th:src等属性，下面是一个例子
 
-``` html
+```html
 <!-- Will produce 'http://localhost:8080/standard/unread' (plus rewriting) -->
  <a  th:href="@{/standard/{type}(type=${type})}">view</a>
 
@@ -255,20 +255,20 @@ URL在Web应用模板中占据着十分重要的地位，需要特别注意的�
 ```
 设置背景
 
-``` html
+```html
 <div th:style="'background:url(' + @{/<path-to-image>} + ');'"></div>
 ```
 
 根据属性值改变背景
 
-``` html
+```html
  <div class="media-object resource-card-image"  th:style="'background:url(' + @{(${collect.webLogo}=='' ? 'img/favicon.png' : ${collect.webLogo})} + ')'" ></div>
 ```
 几点说明：
 
- * 上例中URL最后的``` (orderId=${o.id}) ``` 表示将括号内的内容作为URL参数处理，该语法避免使用字符串拼接，大大提高了可读性
- *  ``` @{...} ```表达式中可以通过``` {orderId} ```访问Context中的orderId变量
- *  ``` @{/order} ```是Context相关的相对路径，在渲染时会自动添加上当前Web应用的Context名字，假设context名字为app，那么结果应该是/app/order
+ * 上例中URL最后的` (orderId=${o.id}) ` 表示将括号内的内容作为URL参数处理，该语法避免使用字符串拼接，大大提高了可读性
+ *  ` @{...} `表达式中可以通过` {orderId} `访问Context中的orderId变量
+ *  ` @{/order} `是Context相关的相对路径，在渲染时会自动添加上当前Web应用的Context名字，假设context名字为app，那么结果应该是/app/order
 
 
 
@@ -277,7 +277,7 @@ URL在Web应用模板中占据着十分重要的地位，需要特别注意的�
 内联文本：[[...]]内联文本的表示方式，使用时，必须先用th:inline="text/javascript/none"激活，th:inline可以在父级标签内使用，甚至作为body的标签。内联文本尽管比th:text的代码少，不利于原型显示。
 
 
-``` js
+```js
 <script th:inline="javascript">
 /*<![CDATA[*/
 ...
@@ -290,7 +290,7 @@ var size = /*[[${size}]]*/ 0;
 
 js附加代码：
 
-``` js
+```js
 /*[+
 var msg = 'This is a working application';
 +]*/
@@ -325,7 +325,7 @@ var msg = 'This is a non-working template';
 ####  dates
 
 
-``` html
+```java
 /*
  * Format date with the specified pattern
  * Also works with arrays, lists or sets
@@ -348,7 +348,7 @@ ${#dates.createToday()}
 
 ####  strings
 
-``` html
+```java
 /*
  * Check whether a String is empty (or null). Performs a trim() operation before check
  * Also works with arrays, lists or sets

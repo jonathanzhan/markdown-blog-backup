@@ -6,6 +6,8 @@ tags:
 categories:
 - 运维实施
 ---
+本文主要介绍在contos7下，如何以root身份登录gnome桌面
+<!-- more -->
 ## CentOS 7自动以root身份登录gnome桌面
 刚刚在虚拟机中成功的安装上了CentOS 7 64位，发现在登录gnome桌面时必须创建一个普通用户，否则不让登录。
 

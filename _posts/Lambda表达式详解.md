@@ -1,10 +1,12 @@
 ---
 title: Lambda表达式详解
 date: 2018-09-03 18:14:39
+thumbnail: /files/thumb/3.jpg
 tags:
 - java基础
 categories:
 - java
+toc: true
 ---
 Lambda表达式是Java SE 8中一个重要的新特性。lambda表达式允许你通过表达式来代替功能接口。 lambda表达式就和方法一样,它提供了一个正常的参数列表和一个使用这些参数的主体(body,可以是一个表达式或一个代码块)。
 <!--more-->

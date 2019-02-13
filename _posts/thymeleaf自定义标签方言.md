@@ -1,11 +1,12 @@
 ---
 title: thymeleaf自定义标签方言
 date: 2017-11-06 15:12:50
-thumbnail: files/thumb/2.jpg
+thumbnail: /files/thumb/2.jpg
 tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 在上几篇文章中，讲解了thymeleaf的方言定义以及处理器等，接下来通过一个具体的使用来深度了解下thymeleaf方言和处理器的具体使用
 <!-- more -->

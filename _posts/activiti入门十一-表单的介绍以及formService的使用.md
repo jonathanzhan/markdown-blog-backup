@@ -5,6 +5,7 @@ tags:
  - activiti
 categories:
  - activiti
+toc: true
 ---
 本来这章是要讲解FormService的使用，在准备资料的过程中，发现还是需要先介绍下activiti的不同表单类型的应用。同时附带把FormService中常用的操作做个介绍
 在Activiti中总共有三种表单，动态表单，普通表单和外置表单。

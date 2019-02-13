@@ -5,11 +5,11 @@ tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 thymeleaf毕竟是一个脚本语言,在生成html时有一些特殊的字符串需要通过特定的拼接才能完成，本文主要介绍下在thymeleaf下字符串的常用操作
 <!-- more -->
 
-[TOC]
 
 ## 字符串拼接
 ```html

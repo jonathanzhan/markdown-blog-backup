@@ -13,7 +13,7 @@ sudo passwd root
 #切换到root用户
 sudo -s
 ```
-
+<!-- more -->
 想要在登录界面使用root身份登录，可编辑/etc/lightdm/目录下的lightdm.conf文件，如没有此文件，直接创建
 
 在terminal下输入

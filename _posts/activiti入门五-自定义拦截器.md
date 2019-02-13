@@ -5,6 +5,7 @@ tags:
 - activiti
 categories:
 - activiti
+toc: true
 ---
 在上章引擎与引擎配置对象的介绍中,主要介绍了activiti的默认常用的几种引擎配置对象,接下来主要讲下自定义引擎对象以及拦截器.
 <!-- more -->

@@ -1,17 +1,18 @@
 ---
-layout: spring
 title: Spring IOC容器的实现
 date: 2018-06-11 11:27:17
+thumbnail: /files/thumb/4.jpg
 tags:
 - Spring core
 categories:
 - Spring
+toc: true
 ---
 ## 什么是IOC/DI？
 IOC(Inversion of Control)控制反转，就是把原来我们代码里需要实现的对象创建，依赖的代码，反转给容易来实现。简单的说就是将原始类A使用类B时需要创建类B的操作交给容器来创建。
 在传统的开发模式中对象之间是互相依赖的，但是在IOC开发模式中，IOC容器来安排对象之间的依赖。
 IOC的另外名字叫做依赖注入(dependency Injection),所谓的依赖注入，就是由IOC容器在运行期间，动态的将某种依赖关系注入到对象之中。所以依赖注入(DI)和控制反转(IOC)是从不同的角度描述的同一件事情，就是指通过引入IOC容器，利用依赖关系注入的方式，实现对象之间的解耦。
-
+<!-- more -->
 ## 注入方法
 Spring依赖注入的方式有:
 * set注入方式

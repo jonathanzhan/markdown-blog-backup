@@ -7,10 +7,10 @@ categories:
 - 数据库
 ---
 1、查看锁表的命令
-``` show open tables where in_use>0; ```
+` show open tables where in_use>0; `
 2、查看当前进程
 
-``` show processlist; ```
+` show processlist; `
 3、杀掉进程
 
-``` kill process_id; ```
+` kill process_id; `

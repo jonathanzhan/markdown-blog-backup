@@ -5,6 +5,7 @@ tags:
  - activiti
 categories:
  - activiti
+toc: true
 ---
 在咖啡兔的blog中有一篇文章[同步或者重构activiti用户数据的比较](http://www.kafeitu.me/activiti/2012/04/23/synchronize-or-redesign-user-and-role-for-activiti.html),在这里再做简单的介绍以及补充
 <!-- more -->

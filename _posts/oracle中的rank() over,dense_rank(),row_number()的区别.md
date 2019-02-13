@@ -6,11 +6,14 @@ tags:
 categories:
 - 数据库
 ---
+
+oracle中的rank() over,dense_rank(),row_number()的各自使用方法以及区别
+<!-- more -->
 ### 语法
-rank() over([partition by col1] order by col2) 
-dense_rank() over([partition by col1] order by col2) 
-row_number() over([partition by col1] order by col2) 
-其中[partition by col1]可省略。<br/>
+`rank() over([partition by col1] order by col2) `
+`dense_rank() over([partition by col1] order by col2) `
+`row_number() over([partition by col1] order by col2) `
+其中`[partition by col1]`可省略。
 三个分组函数都是按照col1分组内从1开始排序,区别在于:
 **row_number() 是没有重复值的排序(即使两天记录相等也是不重复的) **
 **dense_rank() 是连续排序，两个第二名仍然跟着第三名**
@@ -37,7 +40,7 @@ select '语文',70 from dual;
 
 select * from t;
 ```
-![这里写图片描述](http://img.blog.csdn.net/20160505144636974)
+![](/files/article/oracle/1.png)
 ----------
 
 **row_number()**
@@ -45,7 +48,7 @@ select * from t;
 ```
 select name,score,row_number() over(partition by name order by score) tt from t;
 ```
-![row_number()](http://img.blog.csdn.net/20160505145118632)
+![row_number()](/files/article/oracle/2.png)
 
 
 ----------
@@ -55,7 +58,7 @@ select name,score,row_number() over(partition by name order by score) tt from t;
 ```
 select name,score,rank() over(partition by name order by score) tt from t;
 ```
-![rank()](http://img.blog.csdn.net/20160505145215601)
+![rank()](/files/article/oracle/3.png)
 
 ----------
 **dense_rank()**
@@ -63,5 +66,5 @@ select name,score,rank() over(partition by name order by score) tt from t;
 ```
 select name,score,dense_rank() over(partition by name order by score) tt from t;
 ```
-![dense_rank()](http://img.blog.csdn.net/20160505145422118)
+![dense_rank()](/files/article/oracle/4.png)
 

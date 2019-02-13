@@ -5,6 +5,7 @@ tags:
 - activiti
 categories:
 - activiti
+toc: true
 ---
 本文主要介绍基于maven的pom文件的配置，另外就是activiti的Spring配置。
 <!-- more -->

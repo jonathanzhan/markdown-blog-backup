@@ -5,13 +5,14 @@ tags:
 - linux
 categories:
 - 运维实施
+toc: true
 ---
 
 ### 使用说明
 apt-get install 这样的命令会下载文件放在 /var/cache/apt/archives目录下，然后安装。这样这个目录所占空间会越来越大，幸运的是apt提供了相应的管理工具apt-get clean删除/var/cache/apt/archives/ 和 /var/cache/apt/archives/partial/目录下所有包(锁定的除外)。
 
 apt-get autoclean仅删除不再能被下载的包. 另外aptitude clean也可删除/var/cache/apt/archives/ 和 /var/cache/apt/archives/partial/目录下所有包(锁定的除外)。
-
+<!-- more -->
 ### apt-get autoclean:
 如果你的硬盘空间不大的话，可以定期运行这个程序，将已经删除了的软件包的.deb安装文件从硬盘中删除掉。如果你仍然需要硬盘空间的话，可以试试apt-get clean，这会把你已安装的软件包的安装包也删除掉，当然多数情况下这些包没什么用了，因此这是个为硬盘腾地方的好办法。
 

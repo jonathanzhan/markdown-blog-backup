@@ -5,6 +5,7 @@ tags:
  - activiti
 categories:
  - activiti
+toc: true
 ---
 目前activiti提供的Activiti Modeler有两套，从Activiti5.17后，发布了新的Activiti Modeler组件。本文主要介绍如何在项目中集成最新的Activiti Modeler.
 <!-- more -->

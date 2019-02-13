@@ -5,9 +5,11 @@ tags:
 - thymeleaf
 categories:
 - java
+toc: true
 ---
 ## fragment介绍
 fragment类似于JSP的tag，在html中文件中，可以将多个地方出现的元素块用fragment包起来使用。
+<!-- more -->
 ## fragment使用
 
 ### 定义fragment
@@ -24,7 +26,7 @@ fragment类似于JSP的tag，在html中文件中，可以将多个地方出现�
 2. th:replace:不要自己的主标签，保留th:fragment的主标签。
 3. th:include:保留自己的主标签，不要th:fragment的主标签。（官方3.0后不推荐）
 
-``` html
+```html
 导入片段：
 <div th:insert="footer :: copy"></div>  
   
@@ -51,8 +53,7 @@ fragment类似于JSP的tag，在html中文件中，可以将多个地方出现�
 在Springboot中，默认读取thymeleaf文件的路径是：src/main/resource/templates，静态文件为src/main/resource/static，这个默认值可以在配置文件中修改：spring.thymeleaf.prefix=classpath:/templates/
 
 所有在调用fragment时，是默认从thymeleaf的根路径开始设置的：
-例如
-``` <head th:replace="/include/header::head" > ```
+例如`<head th:replace="/include/header::head" >`
 从读取templates/include/header.html中 fragment=head的代码块
 
 ### fragment的参数设置

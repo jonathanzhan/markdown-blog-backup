@@ -15,7 +15,7 @@ tags:
    ```bash
    mvn archetype:create-from-project
    ```
-3. 在创建的targetgenerated-sourcesarchetype目录下执行
+3. 在创建的target/generated-sources/archetype目录下执行
 
    ```bash
    mvn install

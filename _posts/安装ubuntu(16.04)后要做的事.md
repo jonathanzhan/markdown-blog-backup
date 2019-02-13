@@ -6,7 +6,8 @@ tags:
 categories:
 - 运维实施
 ---
-
+安装完ubuntu后需要做以下操作
+<!-- more -->
 ### 删除libreoffice
 `
 sudo apt-get remove libreoffice-common

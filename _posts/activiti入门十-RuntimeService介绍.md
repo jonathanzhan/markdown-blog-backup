@@ -5,6 +5,7 @@ tags:
  - activiti
 categories:
  - activiti
+toc: true
 ---
 上篇文章*repositoryService介绍*中讲解的repositoryService主要用于管理流程部署的数据，而RuntimeService则主要用于管理流程在运行时产生的数据(流程参数，事件，流程实例，以及执行流)以及对正在运行的流程进行操作的API。
 <!--more -->
