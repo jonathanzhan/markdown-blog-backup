@@ -1,6 +1,6 @@
 ---
 title: 安装ubuntu(16.04)后要做的事
-date: 2016-08-17 15:06:27
+date: 2016-08-17 15:07:27
 tags:
 - linux
 categories:
