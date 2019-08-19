@@ -201,9 +201,35 @@ public class StaticInnerSingleton {
 }
 ```
 
+#### 枚举
+
+```java
+/**
+ * 1，写法简单，2，线程安全。
+ * 枚举出现在java5以后
+ *
+ * @author Jonathan
+ * @version 1.0.0
+ * @date 2019/8/19 19:00
+ * @since 1.0.0+
+ */
+public enum  EnumSingleton {
+    /**
+     * 定义一个枚举的元素，它就代表了Singleton的一个实例。
+     */
+    SINGLETON;
+
+    /**
+     * 单例的操作方法
+     */
+    public void singletonOperation(){
+        // 功能处理
+    }
+}
+```
+
 ### 单例模式的应用场景
 
 * 某类只要求生成一个对象的时候，如每个人的身份证号等。
 * 当对象需要被共享时,由于单例模式只允许创建一个对象,共享该对象可以节省内存,并加快对象访问速度，比如数据库连接池，web配置对象等
 * 某类需要频繁实例化,而创建的对象又频繁被销毁的时候,如多线程的线程池,网络连接池等
-
