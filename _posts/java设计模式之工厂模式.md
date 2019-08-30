@@ -39,6 +39,7 @@ toc: true
 ### 简单工厂模式
 
 #### 简单工厂描述
+
 简单工厂模式又称静态工厂模式.它存在的目的就是定义一个用于创建对象的接口。
 它的组成:
 
@@ -142,6 +143,9 @@ public static void main(String[] args) {
 * 具体工厂(concrete factory)角色: 主要实现抽象工厂的抽象方法。完成具体产品的创建
 * 抽象产品(product):定义了产品的规范,描述了产品的主要特征和功能
 * 具体产品(concrete product):实现了抽象产品角色所定义的接口,由具体工厂创建，同具体工厂之间一一对应。
+
+其结构图如下:
+![工厂模式结构图](/files/dp/factory.png)
 
 #### 工厂模式实现
 
@@ -292,6 +296,9 @@ public static void main(String[] args) {
 * 具体工厂(concrete factory):主要实现抽象工厂中的多个抽象方法,完成具体产品的创建
 * 抽象产品(product):定义了产品的规范,描述了产品的主要特征和功能，抽象工厂模式有多个抽象产品.
 * 具体产品(concrete product):实现了抽象产品角色定义的接口,由具体工厂来创建，同具体工厂之间是多对一的关系。
+
+其结构图如下:
+![抽象工厂模式结构图](/files/dp/abstractfactory.png)
 
 #### 抽象工厂模式实现
 
@@ -505,6 +512,4 @@ public static void main(String[] args) {
     geliTel.display();
     geliRe.display();
 }
-
-
 ```
