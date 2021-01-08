@@ -184,7 +184,9 @@ public class HandlerTest {
 ```
 
 输入结果为
-> before 动态代理
+
+```bash
+before 动态代理
 invoke()方法参数一的类型为:com.sun.proxy.$Proxy0
 调用request方法
 after 动态代理
@@ -200,6 +202,7 @@ after 动态代理
 class com.sun.proxy.$Proxy0
 true
 com.clexel.codetree.java.proxy.ProxyHandler@27c170f0
+```
 
 注意代码中的真实对象中三个方法的返回值(String,返回当前对象,void等).
 由以上代码可以得到结论:
